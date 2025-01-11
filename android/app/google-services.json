@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "246816226386",
+    "project_id": "social-app-6112d",
+    "storage_bucket": "social-app-6112d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246816226386:android:003a7e5fb9d36d1894b38b",
+        "android_client_info": {
+          "package_name": "com.example.youtube_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRX0rxxSlumOY-VlvMJTpQgirjsd3nQiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
