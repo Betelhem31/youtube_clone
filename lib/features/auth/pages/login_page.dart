@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:youtube_clone/auth/repository/auth_service.dart';
+import 'package:youtube_clone/features/auth/repository/auth_service.dart';
 
 class LoginPage extends ConsumerWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

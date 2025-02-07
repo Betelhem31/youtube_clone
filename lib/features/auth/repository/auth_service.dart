@@ -21,6 +21,9 @@ class AuthService {
     required this.googleSignIn,
   });
 
+  //acess the user every where
+  
+
   //how they are signing in
   signInWithGoogle() async {
     final user = await googleSignIn.signIn(); // list of accounts
