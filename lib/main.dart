@@ -6,6 +6,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:youtube_clone/features/auth/pages/login_page.dart';
 import 'package:youtube_clone/features/auth/pages/username_page.dart';
 import 'package:youtube_clone/cores/screens/loader.dart';
+import 'package:youtube_clone/features/channal/pages/channel_settings.dart';
+import 'package:youtube_clone/features/channal/pages/my_channal_screen.dart';
 import 'package:youtube_clone/firebase_options.dart';
 import 'package:youtube_clone/home_page.dart';
 
@@ -51,7 +53,7 @@ class MyApp extends StatelessWidget {
                       ConnectionState.waiting) {
                     return Loader();
                   }
-                  return HomePage();
+                  return MyChannelSettings();
                 },
               );
             }));

@@ -18,7 +18,8 @@ class UserDataService {
     required this.auth,
     required this.firestore,
   });
-
+// this adds user to the fire store -- allows us to add the data
+//but we also need to fetch the data back so we need other method below
   addUserDataToFirestore({
     required String displayName,
     required String email,
@@ -46,5 +47,14 @@ class UserDataService {
         .collection("users")
         .doc(auth.currentUser!.uid)
         .set(user.toMap());
+  }
+
+  Future<UserModel> fetchCurrentUserData() async {
+    final currentUserMap =
+        await firestore.collection("users").doc(auth.currentUser!.uid).get();
+
+    //we use from map here
+    UserModel user = UserModel.fromMap(currentUserMap.data()!);
+    return user;
   }
 }
