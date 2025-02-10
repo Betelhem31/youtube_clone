@@ -5,10 +5,10 @@ class SettingsDialog extends StatefulWidget {
   final String identifier;
   final Function(String channelName)? onSave;
   const SettingsDialog({
-    Key? key,
+    super.key,
     required this.identifier,
     this.onSave,
-  }) : super(key: key);
+  });
 
   @override
   State<SettingsDialog> createState() => _SettingsDialogState();
@@ -45,14 +45,18 @@ class _SettingsDialogState extends State<SettingsDialog> {
       ),
       actions: [
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           child: const Text(
             "CANCEL",
             style: TextStyle(color: Colors.black),
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            widget.onSave!(controller.text);
+          },
           child: const Text(
             "SAVE",
             style: TextStyle(color: Colors.black),
