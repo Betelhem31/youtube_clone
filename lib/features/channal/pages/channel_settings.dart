@@ -79,7 +79,7 @@ class _MyChannelSettingsState extends ConsumerState<MyChannelSettings> {
                     ),
                     SizedBox(height: 14),
                     SettingsItem(
-                        identifier: "Handle",
+                        identifier:"Username",
                         onPressed: () {
                           showDialog(
                             context: context,
